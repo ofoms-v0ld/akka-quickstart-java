@@ -1,0 +1,56 @@
+CheckConfFull.log
+CryptoProJCPInfo.jar
+.attach_pid28716
+mvnw
+mvnw.cmd
+.mvn/
+.directory
+
+HELP.md
+!.mvn/wrapper/maven-wrapper.jar
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+/build/
+
+### VS Code ###
+.vscode/
+/pom.xml
+
+target/surefire-reports/
+target/test-classes/
+db-data
+pgadmin
+for_csp
+java-csp-5.0.40277
+java-csp-5.0.40424
+target
+linux-amd64_deb.tgz
+jcp-2.0.40035
+jcp-2.0.40424
+for_csp.tar.gz
+java-csp-5.0.40277.tar.gz
+jcp-2.0.40035.tar.gz
+npm-debug.log
+
+
+
