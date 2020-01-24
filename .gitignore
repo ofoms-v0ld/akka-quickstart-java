@@ -34,7 +34,7 @@ HELP.md
 
 ### VS Code ###
 .vscode/
-/pom.xml
+
 
 target/surefire-reports/
 target/test-classes/
