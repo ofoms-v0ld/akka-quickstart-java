@@ -28,14 +28,23 @@ public class DeviceTest {
   @Test
   public void testReplyWithLatestTemperatureReading() {
 	  
+	// stories the requestId  
     TestProbe<Device.TemperatureRecorded> recordProbe = testKit.createTestProbe(Device.TemperatureRecorded.class);
+    // requestId, value
     TestProbe<Device.RespondTemperature> readProbe = testKit.createTestProbe(Device.RespondTemperature.class);
+    
+    
+    
+    // create Actor naming Device
     ActorRef<Device.Command> deviceActor = testKit.spawn(Device.create("group", "device"));
 
+    // send the data to the TemperatureRecorded through RecordTemperature  
     deviceActor.tell(new Device.RecordTemperature(1L, 24.0, recordProbe.getRef()));
     assertEquals(1L, recordProbe.receiveMessage().requestId);
 
+    // Send a message to the Actor referenced by this ActorRef.
     deviceActor.tell(new Device.ReadTemperature(2L, readProbe.getRef()));
+    // get temperache
     Device.RespondTemperature response1 = readProbe.receiveMessage();
     assertEquals(2L, response1.requestId);
     assertEquals(Optional.of(24.0), response1.value);
