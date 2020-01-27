@@ -9,6 +9,7 @@ import akka.actor.typed.javadsl.Receive;
 
 public class IotSupervisor extends AbstractBehavior<Void> {
 
+  /* Создаем actor */	
   public static Behavior<Void> create() {
     return Behaviors.setup(IotSupervisor::new);
   }
